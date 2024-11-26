@@ -1,0 +1,46 @@
+.homeRankingItem {
+  width: 15vw;
+  height: 15vw;
+  color: black;
+  box-shadow: 0px 0px 10px var(--color-olive);
+  border-radius: 1rem;
+  transition: all 0.2s ease-out;
+}
+
+.homeRankingItem:hover {
+  box-shadow: 0px 0px 20px var(--color-olive);
+  cursor: pointer;
+}
+
+.textSection {
+  position: absolute;
+  z-index: 999;
+  padding: 0.5rem;
+  text-shadow: 0 0 4px var(--color-olive);
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.brand {
+  font-size: 0.75rem;
+}
+
+.rating {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.olivedrop {
+  width: 1rem;
+}
+
+.olivePicture {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  z-index: 0;
+  border-radius: 1rem;
+}

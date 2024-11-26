@@ -1,0 +1,11 @@
+body {
+  --font-size-default: 16px;
+  --font-family-default: Helvetica, Arial, sans-serif;
+
+  --color-olive: #98ce00;
+  --color-gray: #757780;
+  --color-blue: #6ccff6;
+  --color-white: #fffffc;
+  --color-black: #001011;
+  background-color: var(--color-black);
+}

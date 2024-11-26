@@ -1,0 +1,79 @@
+.topBar {
+  background-color: var(--color-olive);
+  color: var(--color-black);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  height: 6rem;
+  padding: 1rem 0;
+  z-index: 999;
+}
+
+.userIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  text-align: center;
+  justify-self: right;
+  align-self: center;
+  padding-right: 15%;
+}
+
+.userIcons img {
+  max-width: 2rem;
+  transition: ease-in 0.2s;
+}
+
+.userIcons img:hover {
+  transform: scale(1.2);
+}
+
+.userIcons p {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.logo {
+  align-self: center;
+  justify-self: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .userIcons {
+    gap: 2rem;
+
+    padding-right: 5%;
+  }
+
+  .userIcons img {
+    max-width: 2rem;
+  }
+
+  .userIcons img:hover {
+    transform: scale(1.2);
+  }
+
+  .userIcons p {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .userIcons {
+    gap: 1rem;
+
+    padding-right: 2.5%;
+  }
+
+  .userIcons img {
+    max-width: 1.25rem;
+  }
+
+  .userIcons img:hover {
+    transform: scale(1.2);
+  }
+
+  .userIcons p {
+    font-size: 0.75rem;
+  }
+}
