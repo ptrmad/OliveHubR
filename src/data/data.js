@@ -1,3 +1,23 @@
+// import { useEffect, useState } from "react";
+
+// export function dataFetcher() {
+//   const [data, setData] = useState("");
+//   const [error, setError] = useState(null);
+
+//   useEffect(() => {
+//     fetch("https://skoprekedu.pythonanywhere.com/api/olives")
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error();
+//         }
+//         return response.json();
+//       })
+//       .then((data) => setData(data))
+//       .catch((err) => setError(err.message));
+//     return data;
+//   }, []);
+// }
+
 export const data = [
   {
     name: "Golden Grove",

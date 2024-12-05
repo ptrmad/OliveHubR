@@ -17,6 +17,7 @@ import { SearchContextProvider } from "./contexts/SearchContext.jsx";
 import { MyProfile } from "./views/MyProfile/MyProfile.jsx";
 import { FavouritesContextProvider } from "./contexts/FavouritesContext.jsx";
 import { Error } from "./views/Error/Error.jsx";
+import { DataContextProvider } from "./contexts/dataContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,10 +43,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <SearchContextProvider>
-      <FavouritesContextProvider>
-        <RouterProvider router={router} />
-      </FavouritesContextProvider>
-    </SearchContextProvider>
+    <DataContextProvider>
+      <SearchContextProvider>
+        <FavouritesContextProvider>
+          <RouterProvider router={router} />
+        </FavouritesContextProvider>
+      </SearchContextProvider>
+    </DataContextProvider>
   </React.StrictMode>
 );

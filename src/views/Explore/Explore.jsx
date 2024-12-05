@@ -3,11 +3,14 @@ import styles from "./Explore.module.css";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 import { SearchContext } from "../../contexts/SearchContext";
 import { useContext } from "react";
-import { data } from "../../data/data";
+// import { data } from "../../data/data";
 import { Link } from "react-router-dom";
 import { ArticleCover } from "../../components/ArticleCover/ArticleCover";
+import { DataContext } from "../../contexts/dataContext";
 
 export function Explore() {
+  const { data } = useContext(DataContext);
+
   const { search } = useContext(SearchContext);
   const searchResults = data.filter((item) => {
     return (
