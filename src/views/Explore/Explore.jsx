@@ -25,7 +25,7 @@ export function Explore() {
       <div className={styles.listContainer}>
         {searchResults.map((item) => (
           <div key={item.id} className={styles.list}>
-            <Link to={`/${item.itemId}`}>
+            <Link to={`/${item.item_id}`}>
               <ArticleCover
                 isMain={false}
                 key={item.id}

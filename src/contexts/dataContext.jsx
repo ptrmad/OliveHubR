@@ -22,7 +22,6 @@ export function DataContextProvider({ children }) {
       .catch((err) => {
         setError(err.message);
         setIsLoading(false);
-        console.log(data);
       });
   }, [data]);
 
@@ -31,7 +30,6 @@ export function DataContextProvider({ children }) {
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       {!isLoading && !error && children}
-      {children}
     </DataContext.Provider>
   );
 }

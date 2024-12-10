@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
-import { data } from "../../data/data";
+// import { data } from "../../data/data";
 import { FavouritesContext } from "../../contexts/FavouritesContext";
+import { DataContext } from "../../contexts/dataContext";
+
 import { useContext } from "react";
 
 import styles from "./ItemPage.module.css";
@@ -9,12 +11,13 @@ import DROP from "../../assets/olivedrop.png";
 import STAR from "../../assets/star.svg";
 
 export function ItemPage() {
-  const { itemId } = useParams();
+  const { item_id } = useParams();
   const { favourites, setFavourites } = useContext(FavouritesContext);
+  const { data } = useContext(DataContext);
 
   function handleAddToFavourites(newFavItem) {
     const isAlreadyFavorite = favourites.some(
-      (item) => item.itemId === newFavItem.itemId
+      (item) => item.item_id === newFavItem.item_id
     );
 
     isAlreadyFavorite
@@ -22,7 +25,7 @@ export function ItemPage() {
       : setFavourites((prevFavourites) => [...prevFavourites, newFavItem]);
   }
 
-  const itemData = data.filter((olive) => itemId === olive.itemId);
+  const itemData = data.filter((olive) => item_id === olive.item_id);
 
   return (
     <div className={styles.itemPage}>
